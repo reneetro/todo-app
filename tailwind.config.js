@@ -2,9 +2,20 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
+  
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'nerko-one': ['Nerko One', 'cursive']
+      },
+      colors: {
+        'purple': '#301A4B',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }
