@@ -4,7 +4,10 @@ function NavBar() {
   return (
     <div className='NavBar flex flex-row justify-between items-center'>
       <h1 className='text-7xl font-nerko-one text-purple ml-4 mt-4'>TO DO </h1>
-      <div>
+      <div className='flex flex-row justify-evenly items-center'>
+         <a href='#life-tasks' className='text-purple mr-8 hover:text-white hover:bg-pink-300 hover:p-3 hover:rounded-md'>LIFE TASKS</a>
+         <a href='#random-task' className='text-purple mr-8 hover:text-white hover:bg-pink-300 hover:p-3 hover:rounded-md'>RANDOM TASK</a>
+
         <div class='flex justify-center'>
           <div>
             <div class='dropdown relative mr-10'>
@@ -13,15 +16,16 @@ function NavBar() {
           dropdown-toggle
           px-6
           py-2.5
-          bg-transparent
+          bg-pink-300
           text-purple
-          font-medium
+          font-bold
           text-xs
           leading-tight
           uppercase
           rounded
           shadow-md
           hover:shadow-lg
+          hover:text-white
           focus:shadow-lg focus:outline-none focus:ring-0
           active:bg-pink-300 active:shadow-lg active:text-white
           transition
@@ -115,33 +119,12 @@ function NavBar() {
                     Cards
                   </a>
                 </li>
-                <li>
-                  <a
-                    class='
-              dropdown-item
-              text-sm
-              py-2
-              px-4
-              font-normal
-              block
-              w-full
-              whitespace-nowrap
-              bg-transparent
-              text-gray-700
-              hover:bg-gray-100
-            '
-                    href='#random'
-                  >
-                    Random Task
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
         </div>
       </div> 
      
-
     </div>
   );
 }
