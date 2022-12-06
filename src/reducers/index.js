@@ -1,15 +1,18 @@
+import {ADD_LIST} from '../actions'
+
 export const initialState = {
   lists: [],
   lifeTasks: [],
 }
 
 const reducer = (state, action) => {
-    // switch(action.type) {
-    //     case():
-    //         return({
-    //             ...state,
-    //             total: state.total + 1
-    //         });
+     switch(action.type) {
+         case(ADD_LIST):
+         state.lists.push(action.payload)
+            return({
+                ...state,
+                lists: state.lists
+             });
 
     //     case():
     //         return ({ 
@@ -44,9 +47,9 @@ const reducer = (state, action) => {
     //             ...state,
     //             memory: 0
     //         })
-      //  default:
+       default:
             return state;
-  //  }
+    }
 }
 
 export default reducer;
