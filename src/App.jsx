@@ -1,11 +1,11 @@
 import NavBar from './components/NavBar';
-import List from './components/List';
+import ListHome from './components/ListHome';
 
 function App() {
   return (
     <div className="App ">
      <NavBar />
-     <List />
+     <ListHome />
     </div>
   );
 }
